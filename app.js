@@ -52,6 +52,10 @@ const server = http.createServer((request, response) => {
             data = JSON.parse(data);
             if (data != undefined) {
                 console.log(data);
+                if (data.method == 'login') {
+                    console.log(data);
+                }
+                response.end();
             } else {
                 response.end();
             }

@@ -11,3 +11,40 @@
     height: 100vh;
     background-color: brown;
 }
+
+#header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    flex-shrink: 0;
+    background-color: rgb(42, 165, 112);
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(42, 71, 165);
+}
+#footer {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(163, 165, 42);
+}
+
+#searcher {
+    background-color: aqua;
+    width: 100%;
+    height: 60px;
+}
+#sercherInput {
+    margin: 0 25% 0 25%;
+    /* background-color: black; */
+    width: 50%;
+    height: 60px;
+}
