@@ -44,8 +44,18 @@ const server = http.createServer((request, response) => {
         }
         response.end(result);
     } else if (request.method == 'POST') {
-        // TODO: POST AND DATABASE
-        response.end();
+        var data = '';
+        request.on('data', (hash) => {
+           data += hash; 
+        });
+        request.on('end', () => {
+            data = JSON.parse(data);
+            if (data != undefined) {
+                console.log(data);
+            } else {
+                response.end();
+            }
+        });
     } else if (request.method == 'OPTIONS') {
         response.end();
     } else {
